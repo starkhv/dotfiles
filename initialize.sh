@@ -31,4 +31,5 @@ for file in $files; do
 done
 
 # adding ~/.gitignore globally to ignore vim temp files
+echo "adding global gitignore"
 git config --global core.excludesfile ~/.gitignore
