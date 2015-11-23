@@ -40,6 +40,6 @@ echo "Now symlinking original zshrc and zpreztorc files in ~/.zprezto/runcoms to
 zpruncoms=~/.zprezto/runcoms
 mkdir -p $zpruncoms/dotfiles_old
 #backup old files
-mv -f ~/.zprezto/runcoms/zpreztorc ~/.zprezto/runcoms/zshrc ~$zpruncoms/dotfiles_old
+mv -f ~/.zprezto/runcoms/zpreztorc ~/.zprezto/runcoms/zshrc $zpruncoms/dotfiles_old
 ln -s ~/dotfiles/zpreztorc ~/dotfiles/zshrc $zpruncoms
 echo "done"
