@@ -33,3 +33,10 @@ done
 # adding ~/.gitignore globally to ignore vim temp files
 echo "adding global gitignore"
 git config --global core.excludesfile ~/.gitignore
+
+# symlinking original zprezto dot files
+echo "Now symlinking original zshrc and zpreztorc files in ~/.zprezto/runcoms to dotfiles directory"
+rm -f ~/.zprezto/runcoms/zpreztorc ~/.zprezto/runcoms/zshrc
+ln -s ~/dotfiles/zpreztorc ~/.zprezto/runcoms/zpreztorc
+ln -s ~/dotfiles/zshrc ~/.zprezto/runcoms/zshrc
+echo "done"
