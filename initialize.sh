@@ -36,7 +36,10 @@ git config --global core.excludesfile ~/.gitignore
 
 # symlinking original zprezto dot files
 echo "Now symlinking original zshrc and zpreztorc files in ~/.zprezto/runcoms to dotfiles directory"
-rm -f ~/.zprezto/runcoms/zpreztorc ~/.zprezto/runcoms/zshrc
-ln -s ~/dotfiles/zpreztorc ~/.zprezto/runcoms/zpreztorc
-ln -s ~/dotfiles/zshrc ~/.zprezto/runcoms/zshrc
+# zprezto runcoms dir
+zpruncoms=~/.zprezto/runcoms
+mkdir -p $zpruncoms/dotfiles_old
+#backup old files
+mv -f ~/.zprezto/runcoms/zpreztorc ~/.zprezto/runcoms/zshrc ~$zpruncoms/dotfiles_old
+ln -s ~/dotfiles/zpreztorc ~/dotfiles/zshrc $zpruncoms
 echo "done"
