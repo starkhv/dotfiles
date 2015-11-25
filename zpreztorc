@@ -168,9 +168,22 @@ if [ "$TMUX" = "" ]; then tmux; fi
 function mcd(){
 	mkdir $1 && cd $1
 }
+function mx()         
+{
+    local TMPFILE=tmp.$$
+    mv "$1" $TMPFILE
+    mv "$2" "$1"
+    mv $TMPFILE "$2"
+}
+#git show in vim
+function vimgitshow() { 
+git show "$1" | vim - "+set filetype=${1##*.}";
+}
 alias ltr="ls -ltr"
 alias ltra="ls -ltra"
 alias md="mkdir"
 alias c="clear"
 alias x="exit"
 alias m="man"
+alias v="vim"
+alias vo="vim -O"

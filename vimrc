@@ -95,8 +95,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <SPACE> <Leader>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>W :wa<CR>
 nnoremap <Leader>q :q!<CR>
+nnoremap <Leader>Q :qa!<CR>
 nnoremap <Leader>x :x<CR>
+nnoremap <Leader>X :xa<CR>
 nnoremap <Leader>v :vsp<SPACE> 
 nnoremap <Leader>h :sp<SPACE> 
 nnoremap <Leader>9 10<C-W>-
@@ -110,3 +113,5 @@ nnoremap <Leader>k :bp<CR>
 nnoremap <Leader>l :b#<CR>
 nnoremap <Leader>; :bd<CR>
 nnoremap <Leader>e :e<SPACE>
+nnoremap <Leader>I gg=G''
+nnoremap <Leader>< gg<G''
