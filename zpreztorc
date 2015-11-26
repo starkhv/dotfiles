@@ -162,7 +162,8 @@ zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # added by KHV
 
-alias py="ptpython --vi"
+alias py="python --vi"
+alias pyt="ptpython --vi"
 alias t="tmux"
 if [ "$TMUX" = "" ]; then tmux; fi
 function mcd(){
@@ -187,3 +188,8 @@ alias x="exit"
 alias m="man"
 alias v="vim"
 alias vo="vim -O"
+alias vimrc="vim ~/.vimrc"
+alias zpreztorc="vim ~/.zpreztorc"
+alias zshrc="vim ~/.zshrc"
+alias bashrc="vim ~/.bashrc"
+alias tmux.conf="vim ~/.tmux.conf"
