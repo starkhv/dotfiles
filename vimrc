@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " set the runtime path to include Vundle and initialize
  set rtp+=~/.vim/bundle/Vundle.vim
  call vundle#begin()
@@ -18,6 +19,7 @@ filetype off                  " required
  Plugin 'bling/vim-airline'
  Plugin 'Valloric/YouCompleteMe'
  Plugin 'christoomey/vim-tmux-navigator'
+ Plugin 'altercation/vim-colors-solarized'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -50,9 +52,6 @@ filetype off                  " required
 " "
 " " see :h vundle for more details or wiki for FAQ
 " " Put your non-Plugin stuff after this line
-
-
-
 
 "added by KHV
 set t_Co=256
