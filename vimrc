@@ -19,7 +19,6 @@ filetype off                  " required
  Plugin 'bling/vim-airline'
  Plugin 'Valloric/YouCompleteMe'
  Plugin 'christoomey/vim-tmux-navigator'
- Plugin 'altercation/vim-colors-solarized'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
