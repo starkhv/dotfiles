@@ -152,7 +152,7 @@ zstyle ':prezto:module:prompt' theme 'paradox'
 
 # Auto start a session when Zsh is launched in a local terminal.
 # uncommented by KHV
-zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' local 'no'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
@@ -164,7 +164,7 @@ zstyle ':prezto:module:tmux:auto-start' local 'yes'
 alias py="python --vi"
 alias pyt="ptpython --vi"
 alias t="tmux"
-if [ "$TMUX" = "" ]; then tmux; fi
+#if [ "$TMUX" = "" ]; then tmux; fi
 function mcd(){
 	mkdir $1 && cd $1
 }
