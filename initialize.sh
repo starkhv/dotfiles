@@ -43,3 +43,9 @@ mkdir -p $zpruncoms/dotfiles_old
 mv -f ~/.zprezto/runcoms/zpreztorc ~/.zprezto/runcoms/zshrc $zpruncoms/dotfiles_old
 ln -s ~/dotfiles/zpreztorc ~/dotfiles/zshrc $zpruncoms
 echo "done"
+#backup i3conf
+i3dir=~/.i3
+mkdir -p $i3dir/old_config
+mv -f $i3dir/config $i3dir/old_config
+#symlink i3config
+ln -s $dir/i3config $i3dir/config
