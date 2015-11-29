@@ -161,7 +161,7 @@ zstyle ':prezto:module:tmux:auto-start' local 'no'
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 # added by KHV
-alias py="python --vi"
+alias py="python"
 alias pyt="ptpython --vi"
 alias t="tmux"
 #if [ "$TMUX" = "" ]; then tmux; fi

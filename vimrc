@@ -98,8 +98,8 @@ nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>Q :qa!<CR>
 nnoremap <Leader>x :x<CR>
 nnoremap <Leader>X :xa<CR>
-nnoremap <Leader>v :vsp<SPACE> 
-nnoremap <Leader>h :sp<SPACE> 
+nnoremap <Leader>v :vsp 
+nnoremap <Leader>h :sp 
 nnoremap <Leader>9 10<C-W>-
 nnoremap <Leader>0 10<C-W>+
 nnoremap <Leader>[ 10<C-W><
