@@ -196,3 +196,8 @@ alias i3config="vim ~/.i3/config"
 alias sv="sudo vim"
 alias reb="sudo shutdown -r now"
 alias shu="sudo shutdown -h now"
+alias dimon="xrandr --output eDP1 --off; xrandr --output LVDS1 --off"
+alias eimon="xrandr --output eDP1 --auto; xrandr --output LVDS1 --auto"
+alias dxmon="xrandr --output DP1 --off; xrandr --output VGA1 --off"
+alias exmon="xrandr --output DP1 --auto; xrandr --output VGA1 --auto"
+
