@@ -19,6 +19,7 @@ filetype off                  " required
  Plugin 'bling/vim-airline'
  Plugin 'Valloric/YouCompleteMe'
  Plugin 'christoomey/vim-tmux-navigator'
+ Plugin 'Chiel92/vim-autoformat'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -111,5 +112,5 @@ nnoremap <Leader>k :bp<CR>
 nnoremap <Leader>l :b#<CR>
 nnoremap <Leader>; :bd<CR>
 nnoremap <Leader>e :e<SPACE>
-nnoremap <Leader>I gg=G''
+nnoremap <Leader>I :Autoformat<CR>
 nnoremap <Leader>< gg<G''
