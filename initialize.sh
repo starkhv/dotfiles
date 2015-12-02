@@ -49,3 +49,11 @@ mkdir -p $i3dir/old_config
 mv -f $i3dir/config $i3dir/old_config
 #symlink i3config
 ln -s $dir/i3config $i3dir/config
+echo "backup and update i3 config done"
+#backup ptpython conf
+ptpythondir=~/.ptpython
+mkdir -p $ptpython/old_config
+mv -f $ptpythondir/config.py $ptpythondir/old_config
+#symlink ptpython.py
+ln -s $dir/ptpython.py $ptpythondir/config.py
+echo "backup and update ptpython config done"
