@@ -50,6 +50,13 @@ mv -f $i3dir/config $i3dir/old_config
 #symlink i3config
 ln -s $dir/i3config $i3dir/config
 echo "backup and update i3 config done"
+#backup python.vim
+vimftdir=~/.vim/ftplugin
+mkdir -p $vimftdir/old_config
+mv -f $vimftdir/python.vim $vimftdir/old_config
+#symlink python.vim
+ln -s $dir/python.vim $vimftdir/python.vim
+echo "backup and update python.vim config done"
 #backup ptpython conf
 ptpythondir=~/.ptpython
 mkdir -p $ptpython/old_config
