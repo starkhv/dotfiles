@@ -179,6 +179,8 @@ function mx()
 function vimgitshow() { 
 git show "$1" | vim - "+set filetype=${1##*.}";
 }
+export VISUAL=vim
+export EDITOR="$VISUAL"
 alias ltr="ls -ltr"
 alias ltra="ls -ltra"
 alias md="mkdir"
