@@ -59,7 +59,7 @@ ln -s $dir/python.vim $vimftdir/python.vim
 echo "backup and update python.vim config done"
 #backup ptpython conf
 ptpythondir=~/.ptpython
-mkdir -p $ptpython/old_config
+mkdir -p $ptpythondir/old_config
 mv -f $ptpythondir/config.py $ptpythondir/old_config
 #symlink ptpython.py
 ln -s $dir/ptpython.py $ptpythondir/config.py
