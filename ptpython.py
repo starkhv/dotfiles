@@ -18,10 +18,10 @@ def configure(repl):
     :param repl: `PythonRepl` instance.
     """
     # Show function signature (bool).
-    repl.show_signature = True
+    repl.show_signature = False 
 
     # Show docstring (bool).
-    repl.show_docstring = False
+    repl.show_docstring = True 
 
     # Show the "[Meta+Enter] Execute" message when pressing [Enter] only
     # inserts a newline instead of executing the code.

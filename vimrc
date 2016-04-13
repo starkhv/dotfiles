@@ -1,5 +1,9 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set hlsearch
+set incsearch
+syntax on
+set nu "enable line numbers
 
 
 " set the runtime path to include Vundle and initialize
@@ -13,13 +17,20 @@ filetype off                  " required
 "
  Plugin 'scrooloose/syntastic'
  Plugin 'scrooloose/nerdtree'
+ Plugin 'jistr/vim-nerdtree-tabs'
  Plugin 'scrooloose/nerdcommenter'
  Plugin 'tpope/vim-surround'
  Plugin 'kien/ctrlp.vim'
- Plugin 'bling/vim-airline'
+ Plugin 'vim-airline/vim-airline'
+ Plugin 'vim-airline/vim-airline-themes'
  Plugin 'Valloric/YouCompleteMe'
  Plugin 'christoomey/vim-tmux-navigator'
  Plugin 'Chiel92/vim-autoformat'
+ Plugin 'sjl/gundo.vim'
+ Plugin 'tmhedberg/SimpylFold'
+ Plugin 'vim-scripts/indentpython.vim'
+ Plugin 'nvie/vim-flake8'
+ Plugin 'tpope/vim-fugitive'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -63,10 +74,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_highlighting = 0
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_enable_highlighting = 1
 
 "ctrl p
 let g:ctrlp_map = '<c-p>'
@@ -88,6 +99,48 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"enable folding
+set foldmethod=indent
+set foldlevel=99
+let g:SimpylFold_docstring_preview=1
+
+"tabs and auto indents for python files
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+"tabs for js, html, css files
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
+"mark extra whitespace as bad
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+"set utf8 encoding
+set encoding=utf-8
+
+let NERDTreeIgnore=['\.pyc$', '\-$'] "ignore .pyc files in NERDTree
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+"let python code look pretty
+let python_highlight_all=1
 
 "map space key to the leader
 map <SPACE> <Leader>
@@ -113,3 +166,4 @@ nnoremap <Leader>; :bd<CR>
 nnoremap <Leader>e :e<SPACE>
 nnoremap <Leader>I :Autoformat<CR>
 nnoremap <Leader>< gg<G''
+map <Leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>

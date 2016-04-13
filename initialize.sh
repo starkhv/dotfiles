@@ -64,3 +64,7 @@ mv -f $ptpythondir/config.py $ptpythondir/old_config
 #symlink ptpython.py
 ln -s $dir/ptpython.py $ptpythondir/config.py
 echo "backup and update ptpython config done"
+# not yet tested
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/.vim
