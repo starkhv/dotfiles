@@ -15,7 +15,6 @@ set nu "enable line numbers
 " " let Vundle manage Vundle, required
  Plugin 'VundleVim/Vundle.vim'
 "
- Plugin 'scrooloose/syntastic'
  Plugin 'scrooloose/nerdtree'
  Plugin 'jistr/vim-nerdtree-tabs'
  Plugin 'scrooloose/nerdcommenter'
@@ -23,7 +22,6 @@ set nu "enable line numbers
  Plugin 'kien/ctrlp.vim'
  Plugin 'vim-airline/vim-airline'
  Plugin 'vim-airline/vim-airline-themes'
- Plugin 'Valloric/YouCompleteMe'
  Plugin 'christoomey/vim-tmux-navigator'
  Plugin 'Chiel92/vim-autoformat'
  Plugin 'sjl/gundo.vim'
@@ -31,6 +29,8 @@ set nu "enable line numbers
  Plugin 'vim-scripts/indentpython.vim'
  Plugin 'nvie/vim-flake8'
  Plugin 'tpope/vim-fugitive'
+ Plugin 'scrooloose/syntastic'
+ Plugin 'Valloric/YouCompleteMe'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -73,6 +73,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_python_python_exec = "python2"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -145,12 +146,12 @@ let python_highlight_all=1
 "map space key to the leader
 map <SPACE> <Leader>
 nnoremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>W :wa<CR>
+nnoremap <Leader>w :w!<CR>
+nnoremap <Leader>W :wa!<CR>
 nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>Q :qa!<CR>
-nnoremap <Leader>x :x<CR>
-nnoremap <Leader>X :xa<CR>
+nnoremap <Leader>x :x!<CR>
+nnoremap <Leader>X :xa!<CR>
 nnoremap <Leader>v :vsp 
 nnoremap <Leader>h :sp 
 nnoremap <Leader>9 10<C-W>-

@@ -152,9 +152,15 @@ bar {
 }
 
 # added by KHV
-bindsym $mod+i exec google-chrome
+bindsym $mod+i exec google-chrome-stable
 #bindsym $mod+Shift+e exec exit
 bindsym $sup+l exec i3lock
-bindsym $mod+Next exec pactl set-sink-volume 1 -- -10%
-bindsym $mod+Prior exec pactl set-sink-volume 1 -- +10%
-bindsym $mod+Home exec pactl set-sink-mute 1 -- toggle
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+#bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+#bindsym XF86AudioMicMute exec amixer -q set Mic toggle
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 10 -time 0 -steps 1
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 10 -time 0 -steps 1
+#bindsym XF86AudioPlay exec mpc toggle
+#bindsym XF86AudioPrev exec mpc prev
+#bindsym XF86AudioNext exec mpc next
