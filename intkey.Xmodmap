@@ -1,0 +1,12 @@
+! Toggle caps lock and escape key arrangements
+remove Lock = Caps_Lock
+keysym Escape = Caps_Lock
+keysym Caps_Lock = Escape
+clear Control
+clear Mod4
+keysym Super_L = Control_L
+keysym Control_L = Super_L
+keysym Print = Control_R
+keysym Control_R = Print
+add Control = Super_L Print
+add Mod4    = Control_L
