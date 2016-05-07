@@ -242,6 +242,10 @@ sudo cp ~/dotfiles/tvskey.layout /usr/share/X11/xkb/symbols/pc
 sudo rm -rf /var/lib/xkb/*
 sudo pkill X
 }
+#start music
+function music(){
+mpd && ncmpcpp
+}
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 alias ltr="ls -ltr"

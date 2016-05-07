@@ -164,3 +164,4 @@ bindsym $sup+l exec i3lock
 #bindsym XF86AudioPlay exec mpc toggle
 #bindsym XF86AudioPrev exec mpc prev
 #bindsym XF86AudioNext exec mpc next
+bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'

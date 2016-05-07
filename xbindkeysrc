@@ -1,0 +1,18 @@
+"pactl set-sink-volume 0 +5%"
+	XF86AudioRaiseVolume
+"pactl set-sink-volume 0 -5%"
+	XF86AudioLowerVolume
+"pactl set-sink-mute 0 toggle"
+	XF86AudioMute
+"amixer -q set Mic toggle"
+	XF86AudioMicMute
+"xbacklight -inc 10 -time 0 -steps 1"
+	XF86MonBrightnessUp
+"xbacklight -dec 10 -time 0 -steps 1"
+	XF86MonBrightnessDown
+"mpc toggle"
+	XF86AudioPlay
+"mpc prev"
+	XF86AudioPrev
+"mpc next"
+	XF86AudioNext
