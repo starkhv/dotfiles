@@ -100,6 +100,12 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
+# move workspace to other monitor
+bindsym $sup+h move workspace to output LVDS1
+bindsym $sup+l move workspace to output VGA1
+bindsym $sup+j move workspace to output down
+bindsym $sup+k move workspace to output up
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
@@ -154,7 +160,7 @@ bar {
 # added by KHV
 bindsym $mod+i exec google-chrome-stable
 #bindsym $mod+Shift+e exec exit
-bindsym $sup+l exec i3lock
+bindsym $sup+Shift+l exec i3lock
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 #bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 #bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
