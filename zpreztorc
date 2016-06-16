@@ -272,6 +272,8 @@ alias eimon="xrandr --output eDP1 --auto; xrandr --output LVDS1 --auto"
 alias dxmon="xrandr --output DP1 --off; xrandr --output VGA1 --off"
 alias exmon="xrandr --output DP1 --auto; xrandr --output VGA1 --auto"
 alias go="gnome-open"
+alias dt="synclient TouchpadOff=1"
+alias et="synclient TouchpadOff=0"
 # added by Anaconda2 2.4.0 installer
 export PATH="/home/harish/anaconda2/bin:$PATH"
 # source z.sh

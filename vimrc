@@ -31,6 +31,7 @@ set nu "enable line numbers
  Plugin 'tpope/vim-fugitive'
  Plugin 'scrooloose/syntastic'
  Plugin 'Valloric/YouCompleteMe'
+ Plugin 'tomasr/molokai'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -73,12 +74,15 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_python_python_exec = "python2"
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_enable_highlighting = 1
+"set colorscheme to molokai
+colorscheme molokai
+
+"let g:syntastic_python_python_exec = "python2"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 1
+"let g:syntastic_enable_highlighting = 1
 
 "ctrl p
 let g:ctrlp_map = '<c-p>'
@@ -160,8 +164,8 @@ nnoremap <Leader>[ 10<C-W><
 nnoremap <Leader>] 10<C-W>>
 nnoremap <Leader>= 10<C-W>=
 nnoremap <Leader>r :source ~/.vimrc<CR>
-nnoremap <Leader>j :bn<CR>
-nnoremap <Leader>k :bp<CR>
+nnoremap <Leader>k :bn<CR>
+nnoremap <Leader>j :bp<CR>
 nnoremap <Leader>l :b#<CR>
 nnoremap <Leader>; :bd<CR>
 nnoremap <Leader>e :e<SPACE>
