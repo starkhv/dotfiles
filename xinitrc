@@ -1,2 +1,1 @@
 xbindkeys
-exec i3
