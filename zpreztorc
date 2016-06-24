@@ -88,7 +88,7 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'steeef'
+zstyle ':prezto:module:prompt' theme 'sorin'
 
 #
 # Ruby
@@ -248,8 +248,11 @@ mpd && ncmpcpp
 }
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-alias ltr="ls -ltr"
-alias ltra="ls -ltra"
+alias lstr="ls -tr"
+alias lsltr="ls -ltr"
+alias lsalh="ls -alh"
+alias lsah="ls -ah"
+alias lsltra="ls -ltra"
 alias md="mkdir"
 alias c="clear"
 alias x="exit"
@@ -265,8 +268,8 @@ alias bashrc="nvim ~/.bashrc"
 alias tmux.conf="nvim ~/.tmux.conf"
 alias i3config="nvim ~/.i3/config"
 alias sv="sudo nvim"
-alias reb="sudo shutdown -r now"
-alias shu="sudo shutdown -h now"
+alias reb="shutdown -r now"
+alias shu="shutdown -h now"
 alias dimon="xrandr --output eDP1 --off; xrandr --output LVDS1 --off"
 alias eimon="xrandr --output eDP1 --auto; xrandr --output LVDS1 --auto"
 alias dxmon="xrandr --output DP1 --off; xrandr --output VGA1 --off"
@@ -277,5 +280,5 @@ alias et="synclient TouchpadOff=0"
 # added by Anaconda2 2.4.0 installer
 export PATH="/home/harish/anaconda2/bin:$PATH"
 # source z.sh
-. /usr/share/z/z.sh
+. /home/harish/.zdir/z.sh
 
