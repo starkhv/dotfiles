@@ -193,6 +193,15 @@ function proxy_on() {
         export https_proxy=$http_proxy
         export ftp_proxy=$http_proxy
         export rsync_proxy=$http_proxy
+	# split the string to ip and proxy
+	arrIN=(${1//;/ })
+	ip_address=${arrIN[0]}
+	port=${arrIN[1]}
+	# http://askubuntu.com/questions/171975/where-are-the-proxy-settings-saved
+	gsettings set org.gnome.system.proxy mode 'manual'
+	# run the following to change gnome proxy
+	# gsettings set org.gnome.system.proxy.http port 8080
+	# gsettings set org.gnome.system.proxy.http host 172.16.1.1
         echo "Proxy environment variable set."
         return 0
     fi
@@ -221,6 +230,7 @@ function proxy_off(){
     unset https_proxy
     unset ftp_proxy
     unset rsync_proxy
+    gsettings set org.gnome.system.proxy mode 'none'
     echo -e "Proxy environment variable removed."
 }
 #switch keyboard layout to internal
