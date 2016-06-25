@@ -193,10 +193,6 @@ function proxy_on() {
         export https_proxy=$http_proxy
         export ftp_proxy=$http_proxy
         export rsync_proxy=$http_proxy
-	# split the string to ip and proxy
-	arrIN=(${1//;/ })
-	ip_address=${arrIN[0]}
-	port=${arrIN[1]}
 	# http://askubuntu.com/questions/171975/where-are-the-proxy-settings-saved
 	gsettings set org.gnome.system.proxy mode 'manual'
 	# run the following to change gnome proxy
