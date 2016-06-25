@@ -171,3 +171,11 @@ bindsym $sup+Shift+l exec i3lock
 #bindsym XF86AudioPrev exec mpc prev
 #bindsym XF86AudioNext exec mpc next
 bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'
+
+# execute some useful things
+# to make multimedia keys work
+exec xbindkeys
+# gnome settings daemon
+exec gnome-settings-daemon
+# network manager applet
+exec nm-applet
