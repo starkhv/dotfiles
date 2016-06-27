@@ -181,3 +181,5 @@ exec gnome-settings-daemon
 exec nm-applet
 # autocutsel to sync clipboards
 exec autocutsel
+# disable toucpad while typing
+syndaemon -i 1 -K -d
