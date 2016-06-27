@@ -179,3 +179,5 @@ exec xbindkeys
 exec gnome-settings-daemon
 # network manager applet
 exec nm-applet
+# autocutsel to sync clipboards
+exec autocutsel
