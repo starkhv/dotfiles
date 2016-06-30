@@ -180,6 +180,7 @@ exec gnome-settings-daemon
 # network manager applet
 exec nm-applet
 # autocutsel to sync clipboards
-exec autocutsel
+exec autocutsel -fork &
+exec autocutsel -selection PRIMARY -fork &
 # disable toucpad while typing
 exec syndaemon -i 1 -K -d
