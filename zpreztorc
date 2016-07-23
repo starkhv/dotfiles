@@ -287,7 +287,7 @@ alias go="gnome-open"
 alias dt="synclient TouchpadOff=1"
 alias et="synclient TouchpadOff=0"
 # added by Anaconda2 2.4.0 installer
-export PATH="/home/harish/anaconda2/bin:$PATH"
+export PATH="~/anaconda2/bin:$PATH"
 # source z.sh
-. /home/harish/.zdir/z.sh
+. ~/.zdir/z.sh
 
