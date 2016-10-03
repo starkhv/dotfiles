@@ -162,8 +162,13 @@ zstyle ':prezto:module:tmux:auto-start' local 'no'
 
 # added by KHV
 alias py="python"
-alias pyt="ptpython"
-alias t="tmux"
+alias pyt="python3 -m ptpython"
+alias pyt2="python2 -m ptpython"
+alias t="tree"
+alias ta="tree -a"
+alias cps="cp * .*"
+alias mvs="mv * .*"
+alias to="touch"
 #if [ "$TMUX" = "" ]; then tmux; fi
 function mcd(){
 	mkdir $1 && cd $1
@@ -290,4 +295,3 @@ alias et="synclient TouchpadOff=0"
 export PATH="~/anaconda2/bin:$PATH"
 # source z.sh
 . ~/.zdir/z.sh
-

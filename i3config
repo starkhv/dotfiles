@@ -100,6 +100,18 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
+# switch to workspace
+#bindsym $mod+1 workspace 1:im
+#bindsym $mod+2 workspace 2:sorry
+#bindsym $mod+3 workspace 3:you
+#bindsym $mod+4 workspace 4:just
+#bindsym $mod+5 workspace 5:wasted
+#bindsym $mod+6 workspace 6:a
+#bindsym $mod+7 workspace 7:minute
+#bindsym $mod+8 workspace 8:of
+#bindsym $mod+9 workspace 9:your
+#bindsym $mod+0 workspace 10:life
+
 # move workspace to other monitor
 bindsym $sup+h move workspace to output LVDS1
 bindsym $sup+l move workspace to output VGA1
@@ -154,6 +166,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	# strip_workspace_numbers yes
         status_command i3status
 }
 
@@ -184,3 +197,5 @@ exec autocutsel -fork &
 exec autocutsel -selection PRIMARY -fork &
 # disable toucpad while typing
 exec syndaemon -i 1 -K -d
+# set external monitor on the right of internal monitor
+exec xrandr --output VGA-1 --right-of VGA-2
