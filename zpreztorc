@@ -161,9 +161,13 @@ zstyle ':prezto:module:tmux:auto-start' local 'no'
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 # added by KHV
-alias py="python"
+alias py="ptpython"
 alias pyt="ptpython"
 alias t="tmux"
+alias home="xrandr --output DP1 --right-of HDMI2; xrandr --output HDMI2 --rotate right"
+alias fd="find . -type d -name"
+alias ff="find . -type f -name"
+alias f="find -name"
 #if [ "$TMUX" = "" ]; then tmux; fi
 function mcd(){
 	mkdir $1 && cd $1
@@ -286,8 +290,11 @@ alias exmon="xrandr --output DP1 --auto; xrandr --output VGA1 --auto"
 alias go="gnome-open"
 alias dt="synclient TouchpadOff=1"
 alias et="synclient TouchpadOff=0"
-# added by Anaconda2 2.4.0 installer
-export PATH="~/anaconda2/bin:$PATH"
+# added by Anaconda3 installer
+export PATH="/home/f/anaconda3/bin:$PATH"
 # source z.sh
 . ~/.zdir/z.sh
+# required for tensorflow with gpu support
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+export CUDA_HOME=/usr/local/cuda
 

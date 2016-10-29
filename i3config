@@ -183,4 +183,12 @@ exec nm-applet
 exec autocutsel -fork &
 exec autocutsel -selection PRIMARY -fork &
 # disable toucpad while typing
-exec syndaemon -i 1 -K -d
+# exec syndaemon -i 1 -K -d
+# set external monitor to the left of internal
+# exec xrandr --output DP1 --right-of eDP1
+# set vertical monitor to the left of horizontal
+# exec xrandr --output DP1 --right-of HDMI2
+# rotate vertical monitor to the right
+# exec xrandr --output HDMI2 --rotate right
+# rotate external monitor to the left
+# exec xrandr --output DP1 --rotate right
