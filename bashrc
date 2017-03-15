@@ -114,4 +114,4 @@ if ! shopt -oq posix; then
 fi
 
 # added by Anaconda2 2.4.0 installer
-export PATH="/home/harish/anaconda2/bin:$PATH"
+# export PATH="/home/harish/anaconda2/bin:$PATH"
