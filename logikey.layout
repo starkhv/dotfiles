@@ -28,9 +28,9 @@ xkb_symbols "pc105" {
 
 	key <RTSH> {	[ Shift_R		]	};
 	key <RCTL> {	[ Super_R		]	};
-	key <RWIN> {	[ Super_R		]	};
+	key <RWIN> {	[ Control_R		]	};
 
-	key <MENU> {	[ Control_R		]	};
+	key <MENU> {	[ Super_R		]	};
 
 	// Beginning of modifier mappings.
 	modifier_map Shift  { Shift_L, Shift_R };
