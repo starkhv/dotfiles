@@ -269,8 +269,7 @@ export EDITOR="$VISUAL"
 alias lstr="ls -tr"
 alias lsltr="ls -ltr"
 alias lsalh="ls -alh"
-alias lsah="ls -ah"
-alias lsltra="ls -ltra"
+alias lsah="ls -ah" alias lsltra="ls -ltra"
 alias md="mkdir"
 alias rmr="rm -r"
 alias rmf="rm -f"
@@ -298,6 +297,11 @@ alias exmon="xrandr --output DP1 --auto; xrandr --output VGA1 --auto"
 alias go="gnome-open"
 alias dt="synclient TouchpadOff=1"
 alias et="synclient TouchpadOff=0"
+alias tf="source activate tf"
+alias venv='virtualenv'
+# activate the python virtual environment in the current directory
+alias sa='source activate'
+alias da='deactivate'
 # added by Anaconda3 installer
 export PATH="/home/f/anaconda3/bin:$PATH"
 # source z.sh
