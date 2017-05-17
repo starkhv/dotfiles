@@ -299,6 +299,7 @@ alias dt="synclient TouchpadOff=1"
 alias et="synclient TouchpadOff=0"
 alias tf="source activate tf"
 alias venv='virtualenv'
+alias ra='ranger'
 # activate the python virtual environment in the current directory
 alias sa='source activate'
 alias da='deactivate'
