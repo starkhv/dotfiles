@@ -303,6 +303,12 @@ alias ra='ranger'
 # activate the python virtual environment in the current directory
 alias sa='source activate'
 alias da='deactivate'
+alias pud='pushd'
+alias pod='popd'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 # added by Anaconda3 installer
 export PATH="/home/f/anaconda3/bin:$PATH"
 # source z.sh

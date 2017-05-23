@@ -28,11 +28,11 @@
 ## List of files to run at IPython startup.
 #c.InteractiveShellApp.exec_files = []
 
-## lines of code to run at IPython startup.
-c.InteractiveShellApp.exec_lines = ['%autoreload 1']
-
 ## A list of dotted module names of IPython extensions to load.
 c.InteractiveShellApp.extensions = ['autoreload']
+
+## lines of code to run at IPython startup.
+#c.InteractiveShellApp.exec_lines = ['%autoreload 1']
 
 ## dotted module name of an IPython extension to load.
 #c.InteractiveShellApp.extra_extension = ''
