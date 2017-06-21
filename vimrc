@@ -78,7 +78,7 @@ set statusline+=%*
 colorscheme molokai
 
 "set clipboard
-set clipboard=unnamed
+set clipboard+=unnamed
 
 "let g:syntastic_python_python_exec = "python3"
 "let g:syntastic_always_populate_loc_list = 0

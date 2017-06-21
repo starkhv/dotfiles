@@ -164,13 +164,14 @@ zstyle ':prezto:module:tmux:auto-start' local 'no'
 alias py="ptpython"
 alias pyt="ptpython"
 alias tf="source activate tf"
+alias pyt="ptipython"
 alias t="tmux"
 alias home="xrandr --output HDMI-2 --left-of DP-1; xrandr --output HDMI-2 --rotate right"
 alias fd="find . -type d -name"
 alias ff="find . -type f -name"
 alias f="find -name"
 alias py="python"
-alias pyt="python3 -m ptpython"
+alias pyt="ptipython"
 alias t="tree"
 alias ta="tree -a"
 alias cps="cp * .*"
@@ -270,7 +271,8 @@ export EDITOR="$VISUAL"
 alias lstr="ls -tr"
 alias lsltr="ls -ltr"
 alias lsalh="ls -alh"
-alias lsah="ls -ah" alias lsltra="ls -ltra"
+alias lsah="ls -ah"
+alias lsltra="ls -ltra"
 alias md="mkdir"
 alias rmr="rm -r"
 alias rmf="rm -f"
@@ -300,9 +302,16 @@ alias dt="synclient TouchpadOff=1"
 alias et="synclient TouchpadOff=0"
 alias tf="source activate tf"
 alias venv='virtualenv'
+alias ra='ranger'
 # activate the python virtual environment in the current directory
 alias sa='source activate'
 alias da='deactivate'
+alias pud='pushd'
+alias pod='popd'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 # added by Anaconda3 installer
 export PATH="/home/f/anaconda3/bin:$PATH"
 # source z.sh
