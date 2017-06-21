@@ -165,7 +165,7 @@ alias py="ptpython"
 alias pyt="ptpython"
 alias tf="source activate tf"
 alias t="tmux"
-alias home="xrandr --output DP1 --left-of HDMI2; xrandr --output DP1 --rotate right"
+alias home="xrandr --output HDMI-2 --left-of DP-1; xrandr --output HDMI-2 --rotate right"
 alias fd="find . -type d -name"
 alias ff="find . -type f -name"
 alias f="find -name"
@@ -250,9 +250,10 @@ xmodmap ~/.Xmodmap
 }
 #switch keyboard layout to logitech k200
 function logikey(){
-sudo cp ~/dotfiles/logikey.layout /usr/share/X11/xkb/symbols/pc
-sudo rm -rf /var/lib/xkb/*
-sudo pkill X
+setxkbmap -layout us
+rm -f ~/.Xmodmap
+ln -s ~/dotfiles/logikey.Xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap
 }
 #switch keyboard layout to tvs gold
 function tvskey(){
