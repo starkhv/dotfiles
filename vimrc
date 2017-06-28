@@ -174,4 +174,8 @@ nnoremap <Leader>; :bd<CR>
 nnoremap <Leader>e :e<SPACE>
 nnoremap <Leader>I :Autoformat<CR>
 nnoremap <Leader>< gg<G''
+nnoremap <Leader>y "ayy
+nnoremap <Leader>p "ap
+nnoremap <Leader>Y "Byy
+nnoremap <Leader>P "Bp
 map <Leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
