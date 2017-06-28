@@ -35,7 +35,12 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'syntax-highlighting' \
   'history-substring-search' \
-  'prompt'
+  'prompt' \
+  'ssh' \
+  'tmux' \
+  'python' \
+  'rsync' \
+
 
 #
 # Editor
@@ -112,7 +117,7 @@ zstyle ':prezto:module:prompt' theme 'paradox'
 #
 
 # Set the SSH identities to load into the agent.
-# zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 
 #
 # Syntax Highlighting
@@ -162,14 +167,16 @@ zstyle ':prezto:module:tmux:auto-start' local 'no'
 
 # added by KHV
 alias py="ptpython"
+alias pyt="ptpython"
+alias tf="source activate tf"
 alias pyt="ptipython"
 alias t="tmux"
-alias home="xrandr --output DP1 --right-of HDMI2; xrandr --output HDMI2 --rotate right"
+alias home="xrandr --output HDMI-2 --left-of DP-1; xrandr --output HDMI-2 --rotate right"
 alias fd="find . -type d -name"
 alias ff="find . -type f -name"
 alias f="find -name"
-alias py="python"
-alias pyt="ptipython"
+alias py="python3"
+alias pyt="ptipython3"
 alias t="tree"
 alias ta="tree -a"
 alias cps="cp * .*"
@@ -249,9 +256,10 @@ xmodmap ~/.Xmodmap
 }
 #switch keyboard layout to logitech k200
 function logikey(){
-sudo cp ~/dotfiles/logikey.layout /usr/share/X11/xkb/symbols/pc
-sudo rm -rf /var/lib/xkb/*
-sudo pkill X
+setxkbmap -layout us
+rm -f ~/.Xmodmap
+ln -s ~/dotfiles/logikey.Xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap
 }
 #switch keyboard layout to tvs gold
 function tvskey(){
@@ -277,7 +285,7 @@ alias rmrf="rm -rf"
 alias c="clear"
 alias x="exit"
 alias m="man"
-alias v="nvim"
+alias v="vim"
 alias a="atom"
 alias s="sudo"
 alias vo="nvim -O"
@@ -309,6 +317,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+alias gst='git status'
 # added by Anaconda3 installer
 export PATH="/home/f/anaconda3/bin:$PATH"
 # source z.sh
@@ -316,3 +325,4 @@ export PATH="/home/f/anaconda3/bin:$PATH"
 # required for tensorflow with gpu support
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
 export CUDA_HOME=/usr/local/cuda
+
