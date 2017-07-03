@@ -33,6 +33,7 @@ set relativenumber "set relative line numbers
  Plugin 'scrooloose/syntastic'
  Plugin 'Valloric/YouCompleteMe'
  Plugin 'tomasr/molokai'
+ Plugin 'janko-m/vim-test'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -68,6 +69,8 @@ set relativenumber "set relative line numbers
 
 "added by KHV
 set t_Co=256
+"set neovim as the strategy form vim-test
+let test#strategy = 'neovim'
 
 "syntastic
 filetype plugin on
@@ -180,3 +183,8 @@ nnoremap <Leader>p "ap
 nnoremap <Leader>Y "Byy
 nnoremap <Leader>P "Bp
 map <Leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader>t :TestNearest<CR>
+nnoremap <Leader>T :TestFile<CR>
+nnoremap <Leader>a :TestSuite<CR>
+nnoremap <Leader>L :TestLast<CR>
+nnoremap <Leader>G :TestVisit<CR>
