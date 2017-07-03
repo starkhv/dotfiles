@@ -4,6 +4,7 @@ set hlsearch
 set incsearch
 syntax on
 set nu "enable line numbers
+set relativenumber "set relative line numbers
 
 
 " set the runtime path to include Vundle and initialize
