@@ -34,6 +34,7 @@ set relativenumber "set relative line numbers
  Plugin 'Valloric/YouCompleteMe'
  Plugin 'tomasr/molokai'
  Plugin 'janko-m/vim-test'
+ Plugin 'jgdavey/tslime.vim'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
