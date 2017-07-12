@@ -5,6 +5,7 @@ set incsearch
 syntax on
 set nu "enable line numbers
 set relativenumber "set relative line numbers
+set splitbelow "horizontal split opens new file in bottom, this also affects location of preview window
 
 
 " set the runtime path to include Vundle and initialize
@@ -16,25 +17,28 @@ set relativenumber "set relative line numbers
 " " let Vundle manage Vundle, required
  Plugin 'VundleVim/Vundle.vim'
 "
- Plugin 'scrooloose/nerdtree'
- Plugin 'jistr/vim-nerdtree-tabs'
+ "Plugin 'scrooloose/nerdtree'
+ "Plugin 'jistr/vim-nerdtree-tabs'
  Plugin 'scrooloose/nerdcommenter'
- Plugin 'tpope/vim-surround'
+ "Plugin 'tpope/vim-surround'
  Plugin 'kien/ctrlp.vim'
  Plugin 'vim-airline/vim-airline'
  Plugin 'vim-airline/vim-airline-themes'
  Plugin 'christoomey/vim-tmux-navigator'
- Plugin 'Chiel92/vim-autoformat'
- Plugin 'sjl/gundo.vim'
- Plugin 'tmhedberg/SimpylFold'
- Plugin 'vim-scripts/indentpython.vim'
- Plugin 'nvie/vim-flake8'
- Plugin 'tpope/vim-fugitive'
- Plugin 'scrooloose/syntastic'
- Plugin 'Valloric/YouCompleteMe'
+ "Plugin 'Chiel92/vim-autoformat'
+ "Plugin 'sjl/gundo.vim'
+ "Plugin 'tmhedberg/SimpylFold'
+ "Plugin 'vim-scripts/indentpython.vim'
+ "Plugin 'nvie/vim-flake8'
+ "Plugin 'tpope/vim-fugitive'
+ "Plugin 'scrooloose/syntastic'
+ Plugin 'Shougo/deoplete.nvim'
+ Plugin 'zchee/deoplete-jedi'
  Plugin 'tomasr/molokai'
  Plugin 'janko-m/vim-test'
  Plugin 'jgdavey/tslime.vim'
+ "Plugin 'SirVer/ultisnips'
+ "Plugin 'honza/vim-snippets'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -72,6 +76,13 @@ set relativenumber "set relative line numbers
 set t_Co=256
 "set neovim as the strategy form vim-test
 let test#strategy = 'neovim'
+"enable deoplete
+let g:deoplete#enable_at_startup = 1
+"enable deoplete jedi docstring in preview window
+let g:deoplete#sources#jedi#show_docstring = 1
+"remap keys for selecting next and previous suggestions in popup menu
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "syntastic
 filetype plugin on
@@ -93,7 +104,7 @@ set clipboard+=unnamedplus
 "let g:syntastic_enable_highlighting = 1
 
 "ctrl p
-let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 "airline
