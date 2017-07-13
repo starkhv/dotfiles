@@ -6,6 +6,9 @@ syntax on
 set nu "enable line numbers
 set relativenumber "set relative line numbers
 set splitbelow "horizontal split opens new file in bottom, this also affects location of preview window
+"prefer git instead of annoying swap files
+set nobackup
+set noswapfile
 
 
 " set the runtime path to include Vundle and initialize
