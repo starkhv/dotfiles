@@ -36,8 +36,8 @@ set splitbelow "horizontal split opens new file in bottom, this also affects loc
  Plugin 'zchee/deoplete-jedi'
  Plugin 'tomasr/molokai'
  Plugin 'janko-m/vim-test'
- "Plugin 'SirVer/ultisnips'
- "Plugin 'honza/vim-snippets'
+ Plugin 'SirVer/ultisnips'
+ Plugin 'honza/vim-snippets'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -82,6 +82,15 @@ let g:deoplete#sources#jedi#show_docstring = 1
 "remap keys for selecting next and previous suggestions in popup menu
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"ULTISNIPS
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-SPACE>"
+let g:UltiSnipsListSnippets="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 "syntastic
 filetype plugin on
