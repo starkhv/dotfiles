@@ -9,7 +9,31 @@ set splitbelow "horizontal split opens new file in bottom, this also affects loc
 "prefer git instead of annoying swap files
 set nobackup
 set noswapfile
-
+set hidden	  "allow opening another file while there is unsaved file in buffer
+set nowrap        " don't wrap lines
+set tabstop=4     " a tab is four spaces
+set backspace=indent,eol,start
+                    " allow backspacing over everything in insert mode
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set shiftwidth=4  " number of spaces to use for autoindenting
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+                    "    case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to
+                    "    shiftwidth, not tabstop
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title
+set visualbell           " don't beep
+set noerrorbells         " don't beep
+" highlight whitespace
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set pastetoggle=<F2>	 " disable paste smartness :)
 
 " set the runtime path to include Vundle and initialize
  set rtp+=~/.vim/bundle/Vundle.vim
@@ -118,14 +142,18 @@ let g:airline_theme='molokai'
 "enable powerline fonts
 let g:airline_powerline_fonts=0
 
-"youcompleteme
-"close suggestion window after something is selected
-autocmd CompleteDone * pclose
+if has('autocmd')
+	"youcompleteme
+	"close suggestion window after something is selected
+	autocmd CompleteDone * pclose
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+	autocmd StdinReadPre * let s:std_in=1
+	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+	map <C-n> :NERDTreeToggle<CR>
+	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+	autocmd filetype python set expandtab
+	autocmd filetype html,xml set listchars-=tab:>.<Paste>
+endif
 
 "enable folding
 set foldmethod=indent
@@ -203,3 +231,6 @@ nnoremap <Leader>T :TestFile<CR>
 nnoremap <Leader>a :TestSuite<CR>
 nnoremap <Leader>L :TestLast<CR>
 nnoremap <Leader>G :TestVisit<CR>
+" Use Q for formatting the current paragraph (or selection)
+vmap Q gq
+nmap Q gqap
