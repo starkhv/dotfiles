@@ -64,8 +64,8 @@ set pastetoggle=<F2>	 " disable paste smartness :)
  Plugin 'tomasr/molokai'
  Plugin 'janko-m/vim-test'
  Plugin 'jgdavey/tslime.vim'
- "Plugin 'SirVer/ultisnips'
- "Plugin 'honza/vim-snippets'
+ Plugin 'SirVer/ultisnips'
+ Plugin 'honza/vim-snippets'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -110,7 +110,15 @@ let g:deoplete#sources#jedi#show_docstring = 1
 "remap keys for selecting next and previous suggestions in popup menu
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"ULTISNIPS
+let g:UltiSnipsExpandTrigger="<c-SPACE>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+"set default ultisnips directories
+let g:UltiSnipsSnippetDirectories = ['~/dotfiles/UltiSnips']
 "syntastic
 filetype plugin on
 set statusline+=%#warningmsg#
