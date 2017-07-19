@@ -63,9 +63,9 @@ set pastetoggle=<F2>	 " disable paste smartness :)
  Plugin 'zchee/deoplete-jedi'
  Plugin 'tomasr/molokai'
  Plugin 'janko-m/vim-test'
- Plugin 'jgdavey/tslime.vim'
  Plugin 'SirVer/ultisnips'
  Plugin 'honza/vim-snippets'
+ Plugin 'jgdavey/tslime.vim'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -111,7 +111,9 @@ let g:deoplete#sources#jedi#show_docstring = 1
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 "ULTISNIPS
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-SPACE>"
+let g:UltiSnipsListSnippets="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
@@ -119,6 +121,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 "set default ultisnips directories
 let g:UltiSnipsSnippetDirectories = ['~/dotfiles/UltiSnips']
+
 "syntastic
 filetype plugin on
 set statusline+=%#warningmsg#
