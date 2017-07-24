@@ -47,7 +47,7 @@ set pastetoggle=<F2>	 " disable paste smartness :)
  "Plugin 'scrooloose/nerdtree'
  "Plugin 'jistr/vim-nerdtree-tabs'
  Plugin 'scrooloose/nerdcommenter'
- "Plugin 'tpope/vim-surround'
+ Plugin 'tpope/vim-surround'
  Plugin 'kien/ctrlp.vim'
  Plugin 'vim-airline/vim-airline'
  Plugin 'vim-airline/vim-airline-themes'
