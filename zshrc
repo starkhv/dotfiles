@@ -21,5 +21,8 @@ export KEYTIMEOUT=1
 # added by Anaconda2 2.4.0 installer
 # export PATH="/home/harish/anaconda2/bin:$PATH"
 # add perforce to path
-#export PATH=~/perforce:$PATH
-#export P4PORT=1666
+export P4USER=hkantheti
+export PATH=~/pworkspaces:$PATH
+export P4PORT=192.168.210.178:16060
+# source virtualenvwrapper
+source virtualenvwrapper.sh
