@@ -24,5 +24,3 @@ export KEYTIMEOUT=1
 export P4USER=hkantheti
 export PATH=~/pworkspaces:$PATH
 export P4PORT=192.168.210.178:16060
-# source virtualenvwrapper
-source virtualenvwrapper.sh
