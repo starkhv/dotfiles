@@ -66,6 +66,8 @@ set pastetoggle=<F2>	 " disable paste smartness :)
  Plugin 'SirVer/ultisnips'
  Plugin 'honza/vim-snippets'
  Plugin 'jgdavey/tslime.vim'
+ Plugin 'xolox/vim-misc'
+ Plugin 'xolox/vim-notes'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
