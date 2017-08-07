@@ -166,16 +166,13 @@ zstyle ':prezto:module:tmux:auto-start' local 'no'
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 # added by KHV
-alias py="ptpython"
-alias pyt="ptpython"
 alias tf="source activate tf"
-alias pyt="ptipython"
 alias t="tmux"
 alias home="xrandr --output HDMI-2 --left-of DP-1; xrandr --output HDMI-2 --rotate right"
 alias fd="find . -type d -name"
 alias ff="find . -type f -name"
 alias f="find -name"
-alias py="python3"
+alias py="python3.6"
 alias pyt="ptipython3"
 alias t="tree"
 alias ta="tree -a"
