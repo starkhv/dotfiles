@@ -327,5 +327,5 @@ alias gst='git status'
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
 export CUDA_HOME=/usr/local/cuda
 # source virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+#source /usr/local/bin/virtualenvwrapper.sh
