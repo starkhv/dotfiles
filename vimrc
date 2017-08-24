@@ -227,8 +227,8 @@ nnoremap <Leader>[ 10<C-W><
 nnoremap <Leader>] 10<C-W>>
 nnoremap <Leader>= 10<C-W>=
 nnoremap <Leader>r :source ~/.vimrc<CR>
-nnoremap <Leader>k :bn<CR>
-nnoremap <Leader>j :bp<CR>
+nnoremap <Leader>j :bn<CR>
+nnoremap <Leader>k :bp<CR>
 nnoremap <Leader>l :b#<CR>
 nnoremap <Leader>; :bd<CR>
 nnoremap <Leader>e :e<SPACE>
