@@ -310,6 +310,7 @@ alias venv='virtualenv'
 alias ra='ranger'
 # activate the python virtual environment in the current directory
 alias so='source env/bin/activate'
+alias so..='source ../env/bin/activate'
 alias sa='source activate'
 alias da='deactivate'
 alias pud='pushd'
@@ -318,6 +319,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+# python django manage.py alias
+alias pm='python manage.py'
 # added by Anaconda3 installer
 #export PATH="/home/f/anaconda3/bin:$PATH"
 # source z.sh
