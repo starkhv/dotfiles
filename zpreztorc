@@ -318,7 +318,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias gst='git status'
 # added by Anaconda3 installer
 #export PATH="/home/f/anaconda3/bin:$PATH"
 # source z.sh
