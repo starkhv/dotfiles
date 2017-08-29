@@ -34,7 +34,9 @@ set noerrorbells         " don't beep
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set pastetoggle=<F2>	 " disable paste smartness :)
-
+" more useful cursor shapes and colors
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon500,i-ci:ver25-Cursor/lCursor-blinkon500,r-cr:hor20-Cursor/lCursor
+au VimLeave * set guicursor=a:ver25-blinkon500
 " set the runtime path to include Vundle and initialize
  set rtp+=~/.vim/bundle/Vundle.vim
  call vundle#begin()
