@@ -183,7 +183,7 @@ alias mvs="mv * .*"
 alias to="touch"
 #if [ "$TMUX" = "" ]; then tmux; fi
 function mcd(){
-	mkdir $1 && cd $1
+	mkdir -p $1 && cd $1
 }
 function mx()         
 {
