@@ -319,6 +319,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+alias q='qutebrowser'
 # python django manage.py alias
 alias pm='python manage.py'
 # added by Anaconda3 installer
