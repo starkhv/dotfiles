@@ -194,7 +194,7 @@ function mx()
 }
 #git show in vim
 function vimgitshow() { 
-git show "$1" | vim - "+set filetype=${1##*.}";
+git show "$1" | nvim - "+set filetype=${1##*.}";
 }
 function proxy_on() {
     export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
