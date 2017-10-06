@@ -59,7 +59,10 @@ au VimLeave * set guicursor=a:ver25-blinkon500
  "Plugin 'tmhedberg/SimpylFold'
  "Plugin 'vim-scripts/indentpython.vim'
  Plugin 'nvie/vim-flake8'
- "Plugin 'tpope/vim-fugitive'
+ " Awesome Git Plugin
+ Plugin 'tpope/vim-fugitive'
+ " Extension to Fugitive to make :Gbrowse work
+ Plugin 'tpope/vim-rhubarb'
  Plugin 'scrooloose/syntastic'
  Plugin 'Shougo/deoplete.nvim'
  Plugin 'zchee/deoplete-jedi'
@@ -70,6 +73,7 @@ au VimLeave * set guicursor=a:ver25-blinkon500
  Plugin 'jgdavey/tslime.vim'
  Plugin 'xolox/vim-misc'
  Plugin 'xolox/vim-notes'
+ Plugin 'airblade/vim-gitgutter'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
