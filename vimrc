@@ -172,6 +172,7 @@ if has('autocmd')
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 	autocmd filetype python set expandtab
 	autocmd filetype html,xml set listchars-=tab:>.<Paste>
+	autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
 
 "enable folding
