@@ -135,6 +135,8 @@ filetype plugin on
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+"show current git branch 
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 "set colorscheme to molokai
 colorscheme molokai
