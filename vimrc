@@ -63,6 +63,8 @@ au VimLeave * set guicursor=a:ver25-blinkon500
  Plugin 'tpope/vim-fugitive'
  " Extension to Fugitive to make :Gbrowse work
  Plugin 'tpope/vim-rhubarb'
+ " Extenstion that makes moving through the quickfix window made easy
+ Plugin 'tpope/vim-unimpaired'
  Plugin 'scrooloose/syntastic'
  Plugin 'Shougo/deoplete.nvim'
  Plugin 'zchee/deoplete-jedi'
