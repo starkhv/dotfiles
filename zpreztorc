@@ -305,7 +305,6 @@ alias exmon="xrandr --output DP1 --auto; xrandr --output VGA1 --auto"
 alias go="gnome-open"
 alias dt="synclient TouchpadOff=1"
 alias et="synclient TouchpadOff=0"
-alias tf="source activate tf"
 alias venv='virtualenv'
 alias ra='ranger'
 # activate the python virtual environment in the current directory
@@ -323,6 +322,8 @@ alias q='qutebrowser'
 # python django manage.py alias
 alias pm='python manage.py'
 alias rp='realpath .'
+# reload zpreztorc
+alias sz='source ~/dotfiles/zpreztorc'
 # added by Anaconda3 installer
 #export PATH="/home/f/anaconda3/bin:$PATH"
 # source z.sh
