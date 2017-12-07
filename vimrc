@@ -69,13 +69,13 @@ au VimLeave * set guicursor=a:ver25-blinkon500
  Plugin 'Shougo/deoplete.nvim'
  Plugin 'zchee/deoplete-jedi'
  Plugin 'tomasr/molokai'
- Plugin 'janko-m/vim-test'
  Plugin 'SirVer/ultisnips'
  Plugin 'honza/vim-snippets'
  Plugin 'jgdavey/tslime.vim'
- Plugin 'xolox/vim-misc'
- Plugin 'xolox/vim-notes'
  Plugin 'airblade/vim-gitgutter'
+" Dependency for vim-easyclip
+ Plugin 'tpope/vim-repeat'
+ Plugin 'svermeulen/vim-easyclip'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -172,7 +172,6 @@ if has('autocmd')
 
 	autocmd StdinReadPre * let s:std_in=1
 	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-	map <C-n> :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 	autocmd filetype python set expandtab
 	autocmd filetype html,xml set listchars-=tab:>.<Paste>
@@ -237,24 +236,13 @@ nnoremap <Leader>0 10<C-W>+
 nnoremap <Leader>[ 10<C-W><
 nnoremap <Leader>] 10<C-W>>
 nnoremap <Leader>= 10<C-W>=
-nnoremap <Leader>r :source ~/.vimrc<CR>
+nnoremap <Leader>r :source ~/dotfiles/vimrc<CR>
 nnoremap <Leader>j :bn<CR>
 nnoremap <Leader>k :bp<CR>
 nnoremap <Leader>l :b#<CR>
 nnoremap <Leader>; :bd<CR>
 nnoremap <Leader>e :e<SPACE>
-nnoremap <Leader>I :Autoformat<CR>
-nnoremap <Leader>< gg<G''
-nnoremap <Leader>y "ayy
-nnoremap <Leader>p "ap
-nnoremap <Leader>Y "Byy
-nnoremap <Leader>P "Bp
-map <Leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <Leader>t :TestNearest<CR>
-nnoremap <Leader>T :TestFile<CR>
-nnoremap <Leader>a :TestSuite<CR>
-nnoremap <Leader>L :TestLast<CR>
-nnoremap <Leader>G :TestVisit<CR>
-" Use Q for formatting the current paragraph (or selection)
-vmap Q gq
-nmap Q gqap
+nnoremap <Leader>e :e<SPACE>
+nnoremap <Leader>e :e<SPACE>
+nnoremap <Leader>n <plug>EasyClipSwapPasteForward
+nnoremap <Leader>p <plug>EasyClipSwapPasteBackwards
