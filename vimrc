@@ -7,6 +7,7 @@ set nu "enable line numbers
 set relativenumber "set relative line numbers
 set splitbelow "horizontal split opens new file in bottom, this also affects location of preview window
 "prefer git instead of annoying swap files
+set splitright
 set nobackup
 set noswapfile
 set hidden	  "allow opening another file while there is unsaved file in buffer
@@ -144,7 +145,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 colorscheme molokai
 
 "set clipboard
-set clipboard+=unnamedplus
+set clipboard=unnamed
 
 "let g:syntastic_python_python_exec = "python3"
 "let g:syntastic_always_populate_loc_list = 0
