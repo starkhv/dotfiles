@@ -77,6 +77,8 @@ au VimLeave * set guicursor=a:ver25-blinkon500
 " Dependency for vim-easyclip
  Plugin 'tpope/vim-repeat'
  Plugin 'svermeulen/vim-easyclip'
+" Python Coverage plugin
+ Plugin 'alfredodeza/coveragepy.vim'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
