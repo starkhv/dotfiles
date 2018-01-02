@@ -92,13 +92,13 @@ bindsym $mod+a focus parent
 # switch to workspace
 bindsym $mod+1 workspace 1:code
 bindsym $mod+2 workspace 2:code2
-bindsym $mod+3 workspace 3:www
-bindsym $mod+4 workspace 4:shell
-bindsym $mod+5 workspace 5:code3
+bindsym $mod+3 workspace 3:code3
+bindsym $mod+4 workspace 4:code4
+bindsym $mod+5 workspace 5:shell
 bindsym $mod+6 workspace 6:repl
-bindsym $mod+7 workspace 7:www2
-bindsym $mod+8 workspace 8:tests
-bindsym $mod+9 workspace 9:long
+bindsym $mod+7 workspace 7:tests
+bindsym $mod+8 workspace 8:www
+bindsym $mod+9 workspace 9:www2
 bindsym $mod+0 workspace 10:music
 
 # move workspace to other monitor
