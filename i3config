@@ -92,13 +92,13 @@ bindsym $mod+a focus parent
 # switch to workspace
 bindsym $mod+1 workspace 1:code
 bindsym $mod+2 workspace 2:code2
-bindsym $mod+3 workspace 3:www
-bindsym $mod+4 workspace 4:shell
-bindsym $mod+5 workspace 5:code3
+bindsym $mod+3 workspace 3:code3
+bindsym $mod+4 workspace 4:code4
+bindsym $mod+5 workspace 5:shell
 bindsym $mod+6 workspace 6:repl
-bindsym $mod+7 workspace 7:www2
-bindsym $mod+8 workspace 8:tests
-bindsym $mod+9 workspace 9:long
+bindsym $mod+7 workspace 7:tests
+bindsym $mod+8 workspace 8:www
+bindsym $mod+9 workspace 9:www2
 bindsym $mod+0 workspace 10:music
 
 # move workspace to other monitor
@@ -110,13 +110,13 @@ bindsym $sup+k move workspace to output up
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:code
 bindsym $mod+Shift+2 move container to workspace 2:code2
-bindsym $mod+Shift+3 move container to workspace 3:www
-bindsym $mod+Shift+4 move container to workspace 4:shell
-bindsym $mod+Shift+5 move container to workspace 5:code3
+bindsym $mod+Shift+3 move container to workspace 3:code3
+bindsym $mod+Shift+4 move container to workspace 4:code4
+bindsym $mod+Shift+5 move container to workspace 5:shell
 bindsym $mod+Shift+6 move container to workspace 6:repl
-bindsym $mod+Shift+7 move container to workspace 7:www2
-bindsym $mod+Shift+8 move container to workspace 8:tests
-bindsym $mod+Shift+9 move container to workspace 9:long
+bindsym $mod+Shift+7 move container to workspace 7:tests
+bindsym $mod+Shift+8 move container to workspace 8:www
+bindsym $mod+Shift+9 move container to workspace 9:www2
 bindsym $mod+Shift+0 move container to workspace 10:music
 
 # reload the configuration file
