@@ -18,9 +18,3 @@ fi
 # Customize to your needs...
 bindkey '^r' history-incremental-search-backward
 export KEYTIMEOUT=1
-# added by Anaconda2 2.4.0 installer
-# export PATH="/home/harish/anaconda2/bin:$PATH"
-# add perforce to path
-export P4USER=hkantheti
-export PATH=~/pworkspaces:$PATH
-export P4PORT=192.168.210.178:16060
