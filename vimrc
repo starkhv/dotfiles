@@ -38,84 +38,33 @@ set pastetoggle=<F2>	 " disable paste smartness :)
 " more useful cursor shapes and colors
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon500,i-ci:ver25-Cursor/lCursor-blinkon500,r-cr:hor20-Cursor/lCursor
 au VimLeave * set guicursor=a:ver25-blinkon500
-" set the runtime path to include Vundle and initialize
- set rtp+=~/.vim/bundle/Vundle.vim
- call vundle#begin()
-" " alternatively, pass a path where Vundle should install plugins
-" "call vundle#begin('~/some/path/here')
-"
-" " let Vundle manage Vundle, required
- Plugin 'VundleVim/Vundle.vim'
-"
- "Plugin 'scrooloose/nerdtree'
- "Plugin 'jistr/vim-nerdtree-tabs'
- Plugin 'scrooloose/nerdcommenter'
- Plugin 'tpope/vim-surround'
- Plugin 'kien/ctrlp.vim'
- Plugin 'vim-airline/vim-airline'
- Plugin 'vim-airline/vim-airline-themes'
- Plugin 'christoomey/vim-tmux-navigator'
- "Plugin 'Chiel92/vim-autoformat'
- "Plugin 'sjl/gundo.vim'
- "Plugin 'tmhedberg/SimpylFold'
- "Plugin 'vim-scripts/indentpython.vim'
- Plugin 'nvie/vim-flake8'
+call plug#begin('~/.local/share/nvim/plugged')
+ Plug 'scrooloose/nerdcommenter'
+ Plug 'tpope/vim-surround'
+ Plug 'kien/ctrlp.vim'
+ Plug 'vim-airline/vim-airline'
+ Plug 'vim-airline/vim-airline-themes'
+ Plug 'christoomey/vim-tmux-navigator'
+ Plug 'nvie/vim-flake8'
  " Awesome Git Plugin
- Plugin 'tpope/vim-fugitive'
+ Plug 'tpope/vim-fugitive'
  " Extension to Fugitive to make :Gbrowse work
- Plugin 'tpope/vim-rhubarb'
+ Plug 'tpope/vim-rhubarb'
  " Extenstion that makes moving through the quickfix window made easy
- Plugin 'tpope/vim-unimpaired'
- Plugin 'scrooloose/syntastic'
- Plugin 'Shougo/deoplete.nvim'
- Plugin 'zchee/deoplete-jedi'
- Plugin 'tomasr/molokai'
- Plugin 'SirVer/ultisnips'
- Plugin 'honza/vim-snippets'
- Plugin 'jgdavey/tslime.vim'
- Plugin 'airblade/vim-gitgutter'
+ Plug 'tpope/vim-unimpaired'
+ Plug 'scrooloose/syntastic'
+ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+ Plug 'zchee/deoplete-jedi'
+ Plug 'tomasr/molokai'
+ Plug 'airblade/vim-gitgutter'
 " Dependency for vim-easyclip
- Plugin 'tpope/vim-repeat'
- Plugin 'svermeulen/vim-easyclip'
-" Python Coverage plugin
- Plugin 'alfredodeza/coveragepy.vim'
-" " The following are examples of different formats supported.
-" " Keep Plugin commands between vundle#begin/end.
-" " plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" " plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" " Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" " git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" " The sparkup vim script is in a subdirectory of this repo called vim.
-" " Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" " Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
-"
-" " All of your Plugins must be added before the following line
- call vundle#end()            " required
- filetype plugin indent on    " required
-" " To ignore plugin indent changes, instead use:
-" "filetype plugin on
-" "
-" " Brief help
-" " :PluginList       - lists configured plugins
-" " :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
-" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" " :PluginClean      - confirms removal of unused plugins; append `!` to
-" auto-approve removal
-" "
-" " see :h vundle for more details or wiki for FAQ
-" " Put your non-Plugin stuff after this line
+ Plug 'tpope/vim-repeat'
+ Plug 'svermeulen/vim-easyclip'
+" Initialize plugin system
+call plug#end()
 
 "added by KHV
 set t_Co=256
-"set neovim as the strategy form vim-test
-let test#strategy = 'neovim'
 "enable deoplete
 let g:deoplete#enable_at_startup = 1
 "enable deoplete jedi docstring in preview window
@@ -123,17 +72,6 @@ let g:deoplete#sources#jedi#show_docstring = 1
 "remap keys for selecting next and previous suggestions in popup menu
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-"ULTISNIPS
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<c-SPACE>"
-let g:UltiSnipsListSnippets="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-"set default ultisnips directories
-let g:UltiSnipsSnippetDirectories = ['~/dotfiles/UltiSnips']
 
 "syntastic
 filetype plugin on
@@ -149,12 +87,6 @@ colorscheme molokai
 "set clipboard
 set clipboard=unnamed
 
-"let g:syntastic_python_python_exec = "python3"
-"let g:syntastic_always_populate_loc_list = 0
-"let g:syntastic_auto_loc_list = 0
-"let g:syntastic_check_on_open = 0
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_enable_highlighting = 1
 
 "ctrl p
 "let g:ctrlp_map = '<c-p>'
@@ -186,39 +118,11 @@ set foldmethod=indent
 set foldlevel=99
 let g:SimpylFold_docstring_preview=1
 
-"tabs and auto indents for python files
-"au BufNewFile,BufRead *.py
-    "\ set tabstop=4
-    "\ set softtabstop=4
-    "\ set shiftwidth=4
-    "\ set textwidth=79
-    "\ set expandtab
-    "\ set autoindent
-    "\ set fileformat=unix
-
-"tabs for js, html, css files
-"au BufNewFile,BufRead *.js, *.html, *.css
-    "\ set tabstop=2
-    "\ set softtabstop=2
-    "\ set shiftwidth=2
-
-"mark extra whitespace as bad
-"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "set utf8 encoding
 set encoding=utf-8
 
 let NERDTreeIgnore=['\.pyc$', '\-$'] "ignore .pyc files in NERDTree
-
-"python with virtualenv support
-"py << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-"  project_base_dir = os.environ['VIRTUAL_ENV']
-"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"  execfile(activate_this, dict(__file__=activate_this))
-"EOF
 
 "let python code look pretty
 let python_highlight_all=1
@@ -245,7 +149,3 @@ nnoremap <Leader>k :bp<CR>
 nnoremap <Leader>l :b#<CR>
 nnoremap <Leader>; :bd<CR>
 nnoremap <Leader>e :e<SPACE>
-nnoremap <Leader>e :e<SPACE>
-nnoremap <Leader>e :e<SPACE>
-nnoremap <Leader>n <plug>EasyClipSwapPasteForward
-nnoremap <Leader>p <plug>EasyClipSwapPasteBackwards
