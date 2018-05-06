@@ -320,7 +320,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias q='qutebrowser'
 # python django manage.py alias
-alias pm='python3.6 manage.py'
+alias pm='python manage.py'
 alias rp='realpath .'
 # reload zpreztorc
 alias sz='source ~/dotfiles/zpreztorc'
