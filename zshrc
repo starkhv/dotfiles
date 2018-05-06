@@ -18,3 +18,4 @@ fi
 # Customize to your needs...
 bindkey '^r' history-incremental-search-backward
 export KEYTIMEOUT=1
+bindkey -M vicmd v edit-command-line
