@@ -106,12 +106,6 @@ if has('autocmd')
 	autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
 
-"enable folding
-set foldmethod=indent
-set foldlevel=99
-let g:SimpylFold_docstring_preview=1
-
-
 "set utf8 encoding
 set encoding=utf-8
 
