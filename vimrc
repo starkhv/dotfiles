@@ -101,13 +101,6 @@ let g:airline_theme='molokai'
 let g:airline_powerline_fonts=0
 
 if has('autocmd')
-	"youcompleteme
-	"close suggestion window after something is selected
-	autocmd CompleteDone * pclose
-
-	autocmd StdinReadPre * let s:std_in=1
-	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 	autocmd filetype python set expandtab
 	autocmd filetype html,xml set listchars-=tab:>.<Paste>
 	autocmd BufReadPost fugitive://* set bufhidden=delete
