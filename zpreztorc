@@ -270,6 +270,10 @@ sudo pkill X
 function music(){
 mpd && ncmpcpp
 }
+function j(){
+javac $1.java
+java $1
+}
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 alias lstr="ls -tr"
