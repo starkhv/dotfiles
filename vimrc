@@ -67,6 +67,7 @@ call plug#end()
 set t_Co=256
 "enable deoplete
 let g:deoplete#enable_at_startup = 1
+
 "enable deoplete jedi docstring in preview window
 let g:deoplete#sources#jedi#show_docstring = 1
 "remap keys for selecting next and previous suggestions in popup menu
@@ -113,6 +114,9 @@ let NERDTreeIgnore=['\.pyc$', '\-$'] "ignore .pyc files in NERDTree
 
 "let python code look pretty
 let python_highlight_all=1
+
+"use single python interpreter globally
+let g:python3_host_prog = '/usr/bin/python3'
 
 "map space key to the leader
 map <SPACE> <Leader>
