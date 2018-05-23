@@ -55,7 +55,6 @@ call plug#begin('~/.local/share/nvim/plugged')
  Plug 'scrooloose/syntastic'
  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
  Plug 'zchee/deoplete-jedi'
- Plug 'tomasr/molokai'
  Plug 'airblade/vim-gitgutter'
 " Dependency for vim-easyclip
  Plug 'tpope/vim-repeat'
