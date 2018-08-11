@@ -81,9 +81,6 @@ set statusline+=%*
 "show current git branch 
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-"set colorscheme to molokai
-colorscheme molokai
-
 "set clipboard
 set clipboard=unnamed
 
@@ -95,8 +92,6 @@ let g:ctrlp_cmd = 'CtrlP'
 "airline
 "display all buffers in statusline
 let g:airline#extensions#tabline#enabled = 1
-"set airline theme
-let g:airline_theme='molokai'
 "enable powerline fonts
 let g:airline_powerline_fonts=0
 
