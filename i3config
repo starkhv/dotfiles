@@ -193,7 +193,7 @@ exec autocutsel -selection PRIMARY -fork &
 # rotate vertical monitor to the right
 # exec xrandr --output HDMI2 --rotate right
 # rotate external monitor to the left
-# exec xrandr --output DP1 --rotate right
-exec xrandr --output eDP-1 --off
+# exec xrandr --output DP1 --auto
+exec xrandr --output eDP-1 --auto
 # key binding for qutebrowser
 bindsym $mod+o exec qutebrowser
