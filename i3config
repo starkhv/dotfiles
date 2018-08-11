@@ -172,7 +172,7 @@ bindsym $sup+Shift+l exec i3lock
 #bindsym XF86AudioPlay exec mpc toggle
 #bindsym XF86AudioPrev exec mpc prev
 #bindsym XF86AudioNext exec mpc next
-bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'
+bindsym --release Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 # execute some useful things
 # to make multimedia keys work
