@@ -92,8 +92,6 @@ let g:ctrlp_cmd = 'CtrlP'
 "airline
 "display all buffers in statusline
 let g:airline#extensions#tabline#enabled = 1
-"set airline theme
-let g:airline_theme='molokai'
 "enable powerline fonts
 let g:airline_powerline_fonts=0
 
@@ -101,6 +99,7 @@ if has('autocmd')
 	autocmd filetype python set expandtab
 	autocmd filetype html,xml set listchars-=tab:>.<Paste>
 	autocmd BufReadPost fugitive://* set bufhidden=delete
+	autocmd BufReadPost *.vue set syntax=html
 endif
 
 "set utf8 encoding
