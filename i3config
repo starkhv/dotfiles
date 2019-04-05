@@ -200,3 +200,5 @@ exec autocutsel -selection PRIMARY -fork &
 exec xrandr --output HDMI-2 --left-of DP-1
 # key binding for qutebrowser
 bindsym $mod+o exec qutebrowser
+# swap left and right mouse buttons
+exec xmodmap -e "pointer = 3 2 1"
