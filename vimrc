@@ -53,12 +53,14 @@ call plug#begin('~/.local/share/nvim/plugged')
  " Extenstion that makes moving through the quickfix window made easy
  Plug 'tpope/vim-unimpaired'
  Plug 'scrooloose/syntastic'
- Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+ Plug 'Shougo/deoplete.nvim', { 'tag': '4.1', 'do': ':UpdateRemotePlugins' }
  Plug 'zchee/deoplete-jedi'
  Plug 'airblade/vim-gitgutter'
 " Dependency for vim-easyclip
  Plug 'tpope/vim-repeat'
  Plug 'svermeulen/vim-easyclip'
+ Plug 'pangloss/vim-javascript'
+ Plug 'mattn/emmet-vim'
 " Initialize plugin system
 call plug#end()
 
