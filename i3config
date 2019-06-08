@@ -203,3 +203,5 @@ exec xrandr --output HDMI-2 --right-of DP-1
 bindsym $mod+o exec qutebrowser
 # swap left and right mouse buttons
 exec xmodmap -e "pointer = 3 2 1"
+# key binding for vscode
+bindsym $mod+c exec code
