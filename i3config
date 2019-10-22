@@ -197,8 +197,8 @@ exec autocutsel -selection PRIMARY -fork &
 # exec xrandr --output DP1 --auto
 # exec xrandr --output eDP-1 --auto
 # exec xrandr --output DP1 --rotate right
-exec xrandr --output HDMI-2 --rotate left
-exec xrandr --output HDMI-2 --left-of DP-1
+exec xrandr --output DP-1 --right-of HDMI-2
+exec xrandr --output DP-1 --rotate right
 # key binding for qutebrowser
 bindsym $mod+o exec qutebrowser
 # swap left and right mouse buttons
