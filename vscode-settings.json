@@ -68,5 +68,6 @@
 
 
     //Live-server Settings
-    "liveServer.settings.AdvanceCustomBrowserCmdLine": "google-chrome-stable --incognito"
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "google-chrome-stable --incognito",
+    "files.enableTrash": false
 }
