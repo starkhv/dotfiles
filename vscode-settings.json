@@ -23,13 +23,13 @@
                 ]
             },
             {
-                "before": ["leader", "leader", "q"],
+                "before": ["leader", "q"],
                 "commands": [
                     "workbench.action.closeWindow"
                 ]
             },
             {
-                "before": ["leader", "q"],
+                "before": ["leader", ";"],
                 "commands": [
                     "workbench.action.closeActiveEditor"
                 ]
@@ -63,11 +63,18 @@
                 "commands": [
                     "editor.action.commentLine"
                 ]
-            }
+            },
+            {
+                "before": ["leader", "%"],
+                "commands": [
+                    "workbench.action.splitEditor"
+                ]
+            },
         ],
 
 
     //Live-server Settings
     "liveServer.settings.AdvanceCustomBrowserCmdLine": "google-chrome-stable --incognito",
-    "files.enableTrash": false
+    "files.enableTrash": false,
+    "window.zoomLevel": 0
 }
