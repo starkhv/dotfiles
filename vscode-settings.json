@@ -1,9 +1,9 @@
 {
     //vscode general config
-    "editor.wordWrap": true,
+    "editor.wordWrap": "on",
     //prevent vscode from autocompleting when period is pressed
     //for example in javascript
-    "editor.acceptSuggestionOnCommitCharacter": false
+    "editor.acceptSuggestionOnCommitCharacter": false,
 
     // Vim-Mode Settings
     /* without this the esc and caps-lock do not swap in Vim mode
