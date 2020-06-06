@@ -70,6 +70,12 @@
                     "workbench.action.splitEditor"
                 ]
             },
+            {
+                "before": ["%"],
+                "commands": [
+                    "editor.emmet.action.matchTag"
+                ]
+            },
         ],
 
 
