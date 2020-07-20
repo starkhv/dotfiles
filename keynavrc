@@ -46,7 +46,6 @@ shift+n move-right,move-down
 space warp,click 1,end
 semicolon warp,end
 f click 1
-s click 2
 d click 3
 
 # Zoom to the current window
