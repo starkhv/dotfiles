@@ -45,9 +45,9 @@ shift+b move-left,move-down
 shift+n move-right,move-down
 space warp,click 1,end
 semicolon warp,end
-1 click 1
-2 click 2
-3 click 3
+f click 1
+s click 2
+d click 3
 
 # Zoom to the current window
 w windowzoom
@@ -70,15 +70,17 @@ q record
 
 ### Example using the 'sh' command.
 # Make firefox the active window
-f sh "xdotool windowactivate $(xdotool search -title -- '- Mozilla Firefox')", end
+# f sh "xdotool windowactivate $(xdotool search -title -- '- Mozilla Firefox')", end
 # Make a new tab in google chrome:
-t sh "xdotool windowactivate $(xdotool search --title -- '- Google Chrome' | head -1); xdotool key ctrl+t",end
+# t sh "xdotool windowactivate $(xdotool search --title -- '- Google Chrome' | head -1); xdotool key ctrl+t",end
 # Paste
-v sh "xdotool key shift+Insert"
+# v sh "xdotool key shift+Insert"
 
 ### Drag examples
 # Start drag holding the left mouse button
-#q drag 1
+r drag 1
+# Start drag holding the right mouse button
+# e drag 3
 # Start drag holding middle mouse + control and shift
 #w drag 2 ctrl+shift
 
