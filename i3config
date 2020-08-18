@@ -202,7 +202,7 @@ exec xrandr --output DP-1 --right-of HDMI-2
 # key binding for qutebrowser
 bindsym $mod+o exec qutebrowser
 # swap left and right mouse buttons
-# exec xmodmap -e "pointer = 3 2 1"
+exec xmodmap -e "pointer = 3 2 1"
 # key binding for vscode
 bindsym $mod+c exec code
 # start keynav
