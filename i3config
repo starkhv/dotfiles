@@ -160,8 +160,8 @@ bar {
 }
 
 # added by KHV
-bindsym $mod+i exec google-chrome-stable
-bindsym $mod+Shift+i exec google-chrome-stable --incognito
+bindsym $mod+i exec firefox
+bindsym $mod+Shift+i exec firefox -private-window
 #bindsym $mod+Shift+e exec exit
 bindsym $sup+Shift+l exec i3lock
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
