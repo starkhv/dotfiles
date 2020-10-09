@@ -84,7 +84,7 @@ set statusline+=%*
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 "set clipboard
-set clipboard=unnamed
+set clipboard+=unnamedplus
 
 
 "ctrl p
