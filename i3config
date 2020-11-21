@@ -205,5 +205,7 @@ bindsym $mod+o exec qutebrowser
 exec xmodmap -e "pointer = 3 2 1"
 # key binding for vscode
 bindsym $mod+c exec code
+# DELETE_ME_LATER temporary shortcut to screenshot
+bindsym $mod+Shift+s exec scrot -q 100
 # start keynav
 exec keynav daemonize
