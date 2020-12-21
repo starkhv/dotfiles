@@ -160,7 +160,7 @@ bar {
 }
 
 # added by KHV
-bindsym $mod+i exec firefox
+bindsym $mod+i exec google-chrome-stable
 bindsym $mod+Shift+i exec firefox -private-window
 #bindsym $mod+Shift+e exec exit
 bindsym $sup+Shift+l exec i3lock
